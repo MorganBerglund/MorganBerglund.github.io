@@ -19,7 +19,7 @@
 
 		&.left,
 		&.right {
-			max-width: 40%;
+			max-width: 15%;
 
 			img {
 				width: 100%;
@@ -36,6 +36,13 @@
 			float: right;
 			margin: 0 0 2rem 2rem;
 			top: 0.75rem;
+		}
+		&.midd {
+			max-width: 40%;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		&.fit {
