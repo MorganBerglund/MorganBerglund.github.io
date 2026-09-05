@@ -1,0 +1,223 @@
+/* Custom styling on top of the Massively template — tags, timeline, education cards */
+
+.eyebrow {
+  display: inline-block;
+  color: #ff6b52;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+header.major .subtitle {
+  color: #ff6b52;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-style: normal;
+  margin: -1rem 0 2.5rem 0;
+}
+
+h2.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+
+h2.section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.5rem;
+  height: 4px;
+  border-radius: 2px;
+  background: #ff6b52;
+}
+
+/* Tech stack tags */
+ul.tags {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+ul.tags li {
+  background: #f6f6f6;
+  border: solid 1px #e2e2e2;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: #212931;
+  line-height: 1;
+  -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+ul.tags li:hover {
+  background: #ff6b52;
+  border-color: #ff6b52;
+  color: #ffffff;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.tag-group {
+  margin-bottom: 2.5rem;
+}
+
+.tag-group:last-child {
+  margin-bottom: 0;
+}
+
+.tag-group h4 {
+  color: #909498;
+}
+
+/* Experience timeline */
+ul.timeline {
+  position: relative;
+  list-style: none;
+  padding: 0 0 0 2rem;
+  margin: 0 0 3rem 0;
+}
+
+ul.timeline:before {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6b52), to(rgba(255, 107, 82, 0.08)));
+  background: linear-gradient(#ff6b52, rgba(255, 107, 82, 0.08));
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 1.75rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: solid 3px #ff6b52;
+  -webkit-box-shadow: 0 0 0 4px #ffffff;
+          box-shadow: 0 0 0 4px #ffffff;
+}
+
+.timeline-item h4 {
+  margin: 0 0 0.35rem 0;
+}
+
+.timeline-item .meta {
+  color: #909498;
+  font-style: italic;
+  margin: 0 0 0.85rem 0;
+}
+
+.timeline-item ul.sub {
+  list-style: disc;
+  margin: 0 0 0 1.25rem;
+}
+
+.timeline-item ul.sub li {
+  padding: 0.2rem 0 0.2rem 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item ul.sub li:last-child {
+  margin-bottom: 0;
+}
+
+/* Education cards */
+.edu-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.edu-card {
+  border: solid 1px #e2e2e2;
+  border-radius: 8px;
+  padding: 1.5rem;
+  -webkit-transition: border-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edu-card:hover {
+  border-color: #ff6b52;
+  -webkit-box-shadow: 0 6px 20px rgba(255, 107, 82, 0.12);
+          box-shadow: 0 6px 20px rgba(255, 107, 82, 0.12);
+}
+
+.edu-card h4 {
+  margin: 0 0 0.35rem 0;
+}
+
+.edu-card .role {
+  font-weight: 600;
+  margin: 0 0 0.35rem 0;
+}
+
+.edu-card .meta {
+  color: #909498;
+  font-style: italic;
+  margin: 0 0 0.75rem 0;
+}
+
+.edu-card p:last-child {
+  margin-bottom: 0;
+}
+
+.earlier-note {
+  color: #909498;
+  font-style: italic;
+  font-size: 0.85rem;
+  margin: -1.5rem 0 3rem 0;
+}
+
+@media screen and (max-width: 736px) {
+  ul.timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item:before {
+    left: -1.5rem;
+  }
+}
