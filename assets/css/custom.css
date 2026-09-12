@@ -1,5 +1,35 @@
 /* Custom styling on top of the Massively template — tags, timeline, education cards */
 
+/* Animated hero background (the template's #wrapper > .bg div was never added,
+   so #intro's white text had no dark background to sit on) */
+#intro:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #0a0d11;
+  background-image:
+    linear-gradient(rgba(6, 8, 10, 0.7), rgba(6, 8, 10, 0.7)),
+    radial-gradient(circle at 15% 25%, rgba(255, 107, 82, 0.9), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(70, 140, 255, 0.85), transparent 45%),
+    radial-gradient(circle at 50% 92%, rgba(255, 70, 130, 0.8), transparent 50%);
+  background-blend-mode: normal, screen, screen, screen;
+  background-size: 100% 100%, 200% 200%, 200% 200%, 200% 200%;
+  animation: aurora-shift 18s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-shift {
+  0% { background-position: 0 0, 0% 0%, 100% 0%, 50% 100%; }
+  50% { background-position: 0 0, 60% 40%, 30% 60%, 70% 30%; }
+  100% { background-position: 0 0, 100% 100%, 0% 100%, 20% 60%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #intro:before {
+    animation: none;
+  }
+}
+
 .eyebrow {
   display: inline-block;
   color: #ff6b52;
