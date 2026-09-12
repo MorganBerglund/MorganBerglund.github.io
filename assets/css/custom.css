@@ -30,6 +30,28 @@
   }
 }
 
+/* Content area — replaces the flat white #main with a faint dot-grid texture,
+   soft brand-color corner tints, and a gradient seam where the hero meets it */
+#main {
+  background-color: #fbfbfc;
+  background-image:
+    radial-gradient(circle at 8% 0%, rgba(255, 107, 82, 0.07), transparent 30%),
+    radial-gradient(circle at 92% 0%, rgba(70, 140, 255, 0.06), transparent 30%),
+    radial-gradient(rgba(33, 41, 49, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 24px 24px;
+  box-shadow: 0 -30px 60px -20px rgba(0, 0, 0, 0.12);
+}
+
+#main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b52, #ff9d52 35%, #5e9bff 70%, #ff4682);
+}
+
 .eyebrow {
   display: inline-block;
   color: #ff6b52;
