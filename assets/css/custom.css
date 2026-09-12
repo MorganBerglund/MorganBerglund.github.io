@@ -15,7 +15,7 @@
     radial-gradient(circle at 50% 92%, rgba(255, 70, 130, 0.8), transparent 50%);
   background-blend-mode: normal, screen, screen, screen;
   background-size: 100% 100%, 200% 200%, 200% 200%, 200% 200%;
-  animation: aurora-shift 18s ease-in-out infinite alternate;
+  animation: aurora-shift 8s ease-in-out infinite alternate;
 }
 
 @keyframes aurora-shift {
